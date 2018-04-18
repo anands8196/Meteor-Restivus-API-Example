@@ -1,4 +1,3 @@
-Articles = new Mongo.Collection('articles');
 Users = new Mongo.Collection('Users');//Db
 
 if (Meteor.isServer) {
@@ -37,12 +36,6 @@ if (Meteor.isServer) {
 
         else {
           var data = Users.insert({ "email": email, "name": name, "age": age, "location": location })
-          //Users.insert(data);
-
-          //Articles.update({"name":"anand"},{$set:{age:22}});
-          //var details=this.urlParams.id;
-          //return Users.find().fetch().sort({"name":-1});
-          //return Articles.findOne(details);
           return {
             message: "Successfully Inserted",
             data: data
@@ -76,8 +69,6 @@ if (Meteor.isServer) {
       else {
         return Users.find({ "_id": _id }).fetch();
       }
-      //return Users.findOne({"id":details});
-
     },
 
 
@@ -133,8 +124,6 @@ if (Meteor.isServer) {
           var age = this.bodyParams.age;
           var location = this.bodyParams.location;
           Users.update({ "_id": _id }, { $set: { "name": name, "email": email, "age": age, "location": location } });
-          //details = this.urlParams.id;
-          //return Users.find({ "_id": _id }).fetch();
           return {
             message: "Updated",
             status: 'success',
