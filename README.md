@@ -1,7 +1,7 @@
 # Meteor-Restivus-API-Example
-Restivus: API -Get,Post,Put,Delete Methods
+## Restivus: API -Get,Post,Put,Delete Methods
 
-#POST Method For Creating a new row
+### - POST Method For Creating a new row
 
     post: {
       action: function () {
@@ -34,7 +34,7 @@ Restivus: API -Get,Post,Put,Delete Methods
     }
 
     
-  #GET Method for Searching 
+### - GET Method for Searching 
   
     get: function () {
       var _id = this.urlParams._id;
@@ -56,7 +56,7 @@ Restivus: API -Get,Post,Put,Delete Methods
 
 
 
-  #DELETE Method for deleting a row
+### - DELETE Method for deleting a row
    
     delete: function () {
       var _id = this.urlParams._id;
@@ -86,7 +86,7 @@ Restivus: API -Get,Post,Put,Delete Methods
     }
 
 
-  #Put Method : Updating row
+### - Put Method : Updating row
   
     put: {
       action: function () {
